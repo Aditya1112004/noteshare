@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Phone UI</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <div class="main" id="main">
+      <h1 id="header">DASHBOARD</h1>
+      <!-- profile -->
+      <div class="container">
+        <img src="/images/bg.jpeg" alt="" class="bgImg" />
+      </div>
+      <div class="proCard">
+        <img src="/images/profile.png" alt="" class="userPro" />
+        <h3 class="name">Aditya Kumawat</h3>
+
+        <div class="counts">
+          <div class="countDiv">
+            <h4>MESCOE</h4>
+            <h5>College</h5>
+          </div>
+
+          <div class="countDiv">
+            <h4>2004</h4>
+            <h5>Points</h5>
+          </div>
+          <div class="countDiv">
+            <h4>11</h4>
+            <h5>Uploads</h5>
+          </div>
+
+          <div class="countDiv">
+            <h4>1131</h4>
+            <h5>Downloads</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- table section -->
+      <h2 class="h2">Uploads</h2>
+      <ul>
+        <% if(allAssign.length!=0){j=1%> <% for (let i = 0; i <
+        allAssign.length; i++) {%> <%let data = allAssign[i];%> <% if
+        (data.userId==userId) {%>
+
+        <li class="uploads">
+          <div class="uploadsDiv1">
+            <h2><%=data.subject %></h2>
+            <h3 class="title"><%=data.title %></h3>
+          </div>
+          <div class="cardBtns">
+            <button class="down"><i class="fa fa-download"></i></button>
+            <br />
+            <a href="/delete?id=<%=data.id%>"
+              ><button class="trash"><i class="fa fa-trash"></i></button
+            ></a>
+          </div>
+          <p><%=data.downloads%><i class="fa fa-download"></i></p>
+        </li>
+        <% j++} else {}%> <%} %> <% } else{ %>
+        <li class="uploads">
+          <div class="uploadsDiv1">
+            <h2>Data not found!</h2>
+          </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+
+    <!-- button section -->
+    <div class="navbtns">
+      <button class="btns home"><i class="fa fa-home"></i></button>
+      <button class="btns"><i class="fa fa-search"></i></button>
+      <button class="btns"><i class="fa fa-add"></i></button>
+      <button class="btns"><i class="fa fa-coins"></i></button>
+      <button class="btns"><i class="fa fa-user"></i></button>
+    </div>
+  </body>
+</html>

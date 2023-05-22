@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="aaaa.css" />
+  </head>
+
+  <body>
+    <h1>Search Assignments</h1>
+    <!-- select tag -->
+    <div class="search">
+      <select
+        name="cars"
+        id="searchbar"
+        type="text"
+        name="search"
+        placeholder="Search assigns.."
+      >
+        <option value="MP">MP</option>
+        <option value="DSA">DSA</option>
+        <option value="M3">M3</option>
+        <option value="PPL">PPL</option>
+        <option value="SE">SE</option>
+      </select>
+      <br /><br />
+      <button onClick="search_assign()">Search</button>
+    </div>
+
+    <hr />
+
+    <!-- ordered list -->
+    <ol id="list">
+      <div class="cards">
+        <!-- card -->
+        <div class="card">
+          <div class="top">
+            <b class="name" style="font-weight: normal">Aditya Kumawat </b>
+            <b style="font-weight: normal" class="college">MESCOE</b>
+          </div>
+          <div class="mid">
+            <hr />
+            <p class="subject assigns">DSA</p>
+            <p class="title">Lorem ipsum dolor sit amet conse dfdgkdfl .</p>
+          </div>
+          <div class="end">
+            <button class="shareBtn">
+              <i class="fa fa-brands fa-whatsapp"></i>
+            </button>
+            <button class="downloadBtn">
+              Download <i class="fa fa-download"></i>
+            </button>
+            <b class="count">601 <i class="fa fa-download"></i></b>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="card">
+          <div class="top">
+            <b class="name" style="font-weight: normal">Aditya Kumawat </b>
+            <b style="font-weight: normal" class="college">MESCOE</b>
+          </div>
+          <div class="mid">
+            <hr />
+            <p class="subject assigns">DSA</p>
+            <p class="title">Lorem ipsum dolor sit amet conse dfdgkdfl .</p>
+          </div>
+          <div class="end">
+            <button class="shareBtn">
+              <i class="fa fa-brands fa-whatsapp"></i>
+            </button>
+            <button class="downloadBtn">
+              Download <i class="fa fa-download"></i>
+            </button>
+            <b class="count">601 <i class="fa fa-download"></i></b>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card">
+          <div class="top">
+            <b class="name" style="font-weight: normal">Aditya Kumawat </b>
+            <b style="font-weight: normal" class="college">MESCOE</b>
+          </div>
+          <div class="mid">
+            <hr />
+            <p class="subject assigns">DSA</p>
+            <p class="title">Lorem ipsum dolor sit amet conse dfdgkdfl .</p>
+          </div>
+          <div class="end">
+            <button class="shareBtn">
+              <i class="fa fa-brands fa-whatsapp"></i>
+            </button>
+            <button class="downloadBtn">
+              Download <i class="fa fa-download"></i>
+            </button>
+            <b class="count">601 <i class="fa fa-download"></i></b>
+          </div>
+        </div>
+      </div>
+    </ol>
+
+    <!-- linking javascript -->
+    <script>
+      // JavaScript code
+      function search_assign() {
+        let input = document.getElementById("searchbar").value;
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName("assigns");
+        let card = document.getElementsByClassName("card");
+
+        for (i = 0; i < x.length; i++) {
+          if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display = "none";
+            card[i].style.display = "none";
+          } else {
+            x[i].style.display = "list-item";
+            card[i].style.display = "block";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

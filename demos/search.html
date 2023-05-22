@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creating Search Bar using HTML CSS and Javascript</title>
+
+    <style>
+      #searchbar {
+        margin-left: 15%;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      input[type="text"] {
+        width: 30%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+      }
+
+      /* When the input field gets focus,
+        change its width to 100% */
+      input[type="text"]:focus {
+        width: 70%;
+      }
+
+      #list {
+        font-size: 1.5em;
+        margin-left: 90px;
+      }
+
+      .assigns {
+        display: list-item;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- input tag -->
+
+    <select
+      name="cars"
+      id="searchbar"
+      type="text"
+      name="search"
+      placeholder="Search assigns.."
+    >
+      <option value="MP">MP</option>
+      <option value="DSA">DSA</option>
+    </select>
+    <button onClick="search_assign()">Search</button>
+    <!-- <input
+      id="searchbar"
+      onkeyup="search_assign()"
+      type="text"
+      name="search"
+      placeholder="Search assigns.."
+    /> -->
+
+    <!-- ordered list -->
+    <ol id="list">
+      <!-- card -->
+      <div class="card">
+        <div class="top">
+          <b class="name" style="font-weight: normal">Mayur Kumawat </b>
+          <b style="font-weight: normal" class="college">MESCOE</b>
+        </div>
+        <div class="mid">
+          <hr />
+          <p class="subject assigns">DSA</p>
+          <p class="title">Lorem ipsum dolor sit amet conse dfdgkdfl .</p>
+        </div>
+        <div class="end">
+          <button class="shareBtn">
+            Share &nbsp;<i class="fa fa-brands fa-whatsapp"></i>
+          </button>
+          <button class="downloadBtn">
+            Download <i class="fa fa-download"></i>
+          </button>
+        </div>
+      </div>
+    </ol>
+
+    <!-- linking javascript -->
+    <script>
+      // JavaScript code
+      function search_assign() {
+        let input = document.getElementById("searchbar").value;
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName("assigns");
+        let card = document.getElementsByClassName("card");
+
+        for (i = 0; i < x.length; i++) {
+          if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display = "none";
+            card[i].style.display = "none";
+          } else {
+            x[i].style.display = "list-item";
+            card[i].style.display = "block";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

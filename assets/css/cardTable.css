@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 10px;
+  color: #3d4785;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+/* search bar */
+.search {
+  padding: 10px 30%;
+}
+#searchbar {
+  width: 100%;
+  min-width: 320px;
+  height: 40px;
+  border-radius: 10px;
+}
+.search button {
+  font-size: 18px;
+  padding: 10px 25px;
+  margin: 0 40%;
+  background-color: #3d4785;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.search button:hover {
+  background-color: #4d558c;
+}
+
+/* card */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background-color: #fff;
+  width: 280px;
+  margin: 20px 20px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: inline-block;
+}
+li {
+  list-style: none;
+}
+.card > div {
+  margin: 5px 0;
+}
+.top,
+.mid {
+  padding: 0 5px;
+  font-family: "Roboto Slab", serif;
+}
+.top > .name {
+  font-size: 18px;
+  width: 200px;
+  color: #494949;
+  text-transform: uppercase;
+}
+.top .college {
+  background-color: rgba(131, 204, 131, 0.2);
+  color: rgb(20, 188, 20);
+  padding: 2px 5px;
+  font-size: 10px;
+  float: right;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.mid {
+  padding: 5px;
+}
+.mid p {
+  color: #737373;
+  font-size: 16px;
+}
+.mid .subject {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #000;
+}
+.end {
+  padding: 0 5px;
+}
+.end button {
+  width: fit-content;
+  padding: 5px;
+  margin-left: 5px;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 16px;
+  border: none;
+  transition: 0.3s;
+}
+.end .shareBtn {
+  background-color: rgb(20, 188, 20);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.end .downloadBtn {
+  background-color: #186fe9;
+}
+.end .downloadBtn:hover {
+  background-color: #0b60db;
+}
+.end .count {
+  margin-right: 10px;
+  float: right;
+  font-size: 18px;
+  margin-top: 12px;
+  font-weight: normal;
+  color: #494949;
+}
+/* list  */
+.assigns {
+  /* display: list-item; */
+  list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+  .search {
+    padding: 20px 10%;
+  }
+  #searchbar {
+    width: 100%;
+  }
+  .search button {
+    margin: 0 38%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 26px;
+  }
+  .search {
+    margin: 10px 1% 10px 0;
+    padding: 1px 0px;
+  }
+  #searchbar {
+    min-width: 250px;
+  }
+  .search button {
+    margin: 0 26%;
+  }
+  .card {
+    margin: 5px 2px;
+  }
+  .card > div {
+    margin: 2px 0;
+  }
+  .card .top {
+  }
+  .top > .name {
+    font-size: 14px;
+  }
+  .top .college {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+  .mid {
+    padding: 0 5px 5px 5px;
+  }
+  .mid p {
+    color: #737373;
+    font-size: 14px;
+  }
+  .mid .subject {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .end {
+    padding: 0 5px;
+  }
+}

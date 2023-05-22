@@ -1,0 +1,21 @@
+<%-include('partials/header.ejs')%>
+<head>
+  <link rel="stylesheet" href="/css/loginRegister.css" />
+</head>
+
+<div class="main_container">
+  <div class="sub_con sub1">
+    <h1>Your Password</h1>
+    <div class="imgDiv">
+      <img src="/images/logo.png" alt="Logo" class="logo" />
+    </div>
+  </div>
+  <div class="sub_con sub2">
+    <h1><%=userpass%></h1>
+  </div>
+  <div class="links">
+    <span class="signup"> <a href="/register">Signup</a></span>
+    <span class="forget"> <a href="/login">Login</a></span>
+  </div>
+</div>
+<%-include('partials/footer')%>

@@ -1,0 +1,66 @@
+<%-include('partials/navbar.ejs')%>
+
+<div id="main">
+  <head>
+    <link rel="stylesheet" href="/css/loginRegister.css" />
+  </head>
+<div class=" main_container">
+        <div class="sub_con sub1">
+          <h1>Upload Assignment</h1>          
+        </div>
+
+        <div class="sub_con sub2">
+          <form action="/upload" method="post" class="form" enctype="multipart/form-data">
+            <input type="text" value="<%=username%>" disabled style="display: none;">
+            <input type="text" value="<%=sirname%>" disabled style="display: none;">
+                   
+            <div class="field">
+              <label for="sub">Subject</label>
+               <select
+          name="sub"
+          id="searchbar"
+          type="text"
+          required
+          style="width: 170px"
+        >
+          <option value="MP">MP</option>
+          <option value="DSA">DSA</option>
+          <option value="M3">M3</option>
+          <option value="PPL">PPL</option>
+          <option value="SE">SE</option>
+        </select>
+            </div>
+            <div class="field">
+              <label for="assignmentTitle">Title of Assigment</label>
+              <input
+                class="name"
+                name="assignmentTitle"
+                type="text"
+                placeholder="Title"
+                required
+              />
+            </div>
+            
+            <div class="field">
+              <label for="fileUpload">File upload</label>
+              <input type="file" name="notes" required />
+            </div>
+            <div class="submitBtn">
+              <label for="submit"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="color: red">*</span>Do not upload copyright
+            materials</label
+          ><br />
+          <button type="submit">Upload</button>
+        </div>
+        <div class="links">
+          <span class="forget"> <a href="/profile">Cancel</a></span>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+ 

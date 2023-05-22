@@ -1,0 +1,32 @@
+<%-include('partials/navbar.ejs')%>
+
+<div id="main">
+  <head>
+    <link rel="stylesheet" href="/css/loginRegister.css" />
+  </head>
+<div class=" main_container">
+        <div class="sub_con sub1">
+          <h1>Update Profile</h1>          
+          
+        </div>
+
+        <div class="sub_con sub2">
+          <form action="/editProfile" method="post" class="form" enctype="multipart/form-data">
+            <div class="field">
+              <label for="fileUpload">File upload</label>
+              <input type="file" name="profilePic" required />
+            </div>
+            
+          <button type="submit">Upload</button>
+        </div>
+        <div class="links">
+          <span class="forget"> <a href="/profile">Cancel</a></span>
+        </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+ 

@@ -1,0 +1,75 @@
+<%-include('partials/header.ejs')%>
+<head>
+  <link rel="stylesheet" href="/css/loginRegister.css" />
+</head>
+
+<div class="main_container">
+  <div class="sub_con sub1">
+    <h1>Registration</h1>
+  </div>
+  <div class="sub_con sub2">
+    <form action="/register" method="post" class="form">
+      <div class="field">
+        <label for="firstname">First Name</label>
+        <input
+          class="name"
+          name="firstname"
+          type="text"
+          placeholder="Eg: Aditya"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="lastname">Last Name</label>
+        <input
+          class="name"
+          name="lastname"
+          type="text"
+          placeholder="Eg: Kumawat"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="Eg: example@gmail.com"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="password"
+          placeholder="Eg: Pass@123"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="cpassword">Confirm Password</label>
+        <input
+          type="password"
+          name="cpassword"
+          class="password"
+          placeholder="Eg: Pass@123"
+          required
+        />
+      </div>
+      <div class="field">
+        <label for="secQue">Secret Code For Forget Password</label><br />
+        <input
+          name="secQue"
+          type="text"
+          placeholder="Eg: Nickname,Number,Location,etc..."
+          required
+        />
+      </div>
+      <div class="submitBtn">
+        <button type="submit">Signup</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<%-include('partials/navbar.ejs')%>
+
+<div id="main">
+  <div class="grid-container-new">
+    <div class="item6 table alltable">
+      <table>
+        <tr>
+          <th>Sr.no.</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Subject</th>
+          <th>Points</th>
+          <th>Downloads</th>
+          <th>Action</th>
+          <th>Share</th>
+        </tr>
+        <% if(allAssign.length!=0){%> <% for (let i = 0; i < allAssign.length;
+        i++) {%> <%let data = allAssign[i];%>
+        <tr>
+          <td><%=i+1; %></td>
+          <td><%=data.username%></td>
+          <td><%=data.sirname%></td>
+          <td><%=data.title %></td>
+          <td><%=data.desc %></td>
+          <td><%=data.subject %></td>
+          <td><%=data.points %></td>
+          <td><%=data.downloads%></td>
+          <td>
+            <a href="/update?id=<%=data.id%>" download="<%=data.notes%>">
+              <button class="download">Download</button>
+            </a>
+          </td>
+          <td><%- include("partials/whatsapp")%></td>
+        </tr>
+        <%} %> <% } else{ %>
+        <tr>
+          <td>No Data Found</td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</div>
